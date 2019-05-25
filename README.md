@@ -21,7 +21,7 @@ http://134.209.68.216/
 
 El nombre de la base de datos es **entretenimiento** y las tablas creadas fueron pensadas detenidamente para generar una base de datos consistente respetando las reglas de normalización y al mismo tiempo viendo que todas las tablas esten bien referenciadas y cualquier persona que desee utilizar la pueda entender
 
-**T_ROLES**
+### **T_ROLES**
 
 Esta tabla nos permite elegir el rol de la persona que va a entrar al sistema web si va a ser un usuario, un administrado una empresa etc
 ```
@@ -37,7 +37,7 @@ CREATE TABLE T_ROLES(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
 
-**T_CATEGORIAS**
+### **T_CATEGORIAS**
 
 Esta tabla de categorias permite tener distintas categorias de eventos que el sistema web va a ofrecer al publico en general
 ```
@@ -54,7 +54,7 @@ CREATE TABLE T_CATEGORIAS(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
 
-**T_USUARIOS**
+### **T_USUARIOS**
 
 Cada usuario que se vaya registrando en el sistio web sera insertado en dicha tabla
 ```
@@ -82,7 +82,7 @@ CREATE TABLE T_USUARIOS(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
 
-**T_EMPRESAS**
+### **T_EMPRESAS**
 
 La tabla empresa se va a utilizar para poder registrar todas las empresas que se van a hacer cargo de los eventos tomando en cuenta la categoria y su rol
 ```
