@@ -1,5 +1,11 @@
 # GESTION DE PEDIDOS PARA VENTA DE BOLETOS PARA ENTRETENIMIENTO
 
+
+## Tabla de contenido
+- [URL de Página Web](# URL de Página Web).
+- [Slack](# Slack).
+- [Base De Datos](# Base De Datos).
+
 Lo que se busca en este proyecto es crear unsistema que sirva para la venta de boletos de todo tipo de eventos, ya sea de entretenimiento, conciertos, teatro... etc. Este proyecto se realiza con el objetivo de mejorar los conocimientos sobre html, css, javascript, php. A continuación mostramos todo lo que se ha estado realizando para llevar a cabo con éxito este proyecto
 
 # URL de Página Web
