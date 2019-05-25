@@ -4,11 +4,16 @@ Lo que se busca en este proyecto es crear unsistema que sirva para la venta de b
 
 # URL de Página Web
 
+En esta url se puede ver como se esta llevando a cabo la realización del sistema web
+
+http://134.209.68.216/
 
 # Slack 
 **URL:** https://fooddriverhipermedial.slack.com
 
 # Base De Datos
+
+El nombre de la base de datos es **entretenimiento** y las tablas creadas son las siguientes
 
 **T_ROLES**
 ```
