@@ -2,22 +2,22 @@
 
 
 ## Tabla de contenido
-- [URL de Página Web](# URL de Página Web).
-- [Slack](# Slack).
-- [Base De Datos](# Base De Datos).
+- [URL de Página Web](#URL-de-Página-Web).
+- [Slack](#Slack).
+- [Base De Datos](#Base-De-Datos).
 
 Lo que se busca en este proyecto es crear unsistema que sirva para la venta de boletos de todo tipo de eventos, ya sea de entretenimiento, conciertos, teatro... etc. Este proyecto se realiza con el objetivo de mejorar los conocimientos sobre html, css, javascript, php. A continuación mostramos todo lo que se ha estado realizando para llevar a cabo con éxito este proyecto
 
-# URL de Página Web
+### URL
 
 En esta url se puede ver como se esta llevando a cabo la realización del sistema web
 
 http://134.209.68.216/
 
-# Slack 
+### Slack 
 **URL:** https://fooddriverhipermedial.slack.com
 
-# Base De Datos
+### Base De Datos
 
 El nombre de la base de datos es **entretenimiento** y las tablas creadas fueron pensadas detenidamente para generar una base de datos consistente respetando las reglas de normalización y al mismo tiempo viendo que todas las tablas esten bien referenciadas y cualquier persona que desee utilizar la pueda entender
 
