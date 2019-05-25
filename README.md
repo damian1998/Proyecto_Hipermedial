@@ -65,7 +65,7 @@ CREATE TABLE T_USUARIOS(
 **T_EMPRESAS**
 ```
 CREATE TABLE T_EMPRESAS(
- emp_id              int NOT NULL AUTO_INCREMENT,
+ emp_id              int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  emp_ruc             varchar(13) UNIQUE KEY NOT NULL,
  emp_nombre          varchar(100) NOT NULL,
  emp_direccion       varchar(150) NOT NULL,
