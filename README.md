@@ -107,3 +107,38 @@ CREATE TABLE T_EMPRESAS(
  FOREIGN KEY (emp_cat_id) REFERENCES T_CATEGORIAS(cat_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 ```
+
+### **T_EVENTOS**
+
+La tabla de eventos se utilizara para registrar los eventos que se van a mostrar a los usuarios para que puedan comprar sus boletos y la tabla ira actualizando los asientos por cada compra dependiendo de un general, tribuna, vip, box
+
+```
+CREATE TABLE T_EVENTOS(
+ evt_id             int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ evt_desc           varchar(1000) NOT NULL,
+ evt_fec_evento     date NOT NULL,
+ evt_direccion      varchar(150) NOT NULL,
+ evt_img			longblob NOT NULL,
+ evt_img_tipo       varchar(50),
+ evt_asientos       int NOT NULL,
+ evt_gen            int DEFAULT 0,
+ evt_trib           int DEFAULT 0,
+ evt_vip            int DEFAULT 0,
+ evt_box            int DEFAULT 0,
+ evt_precio         int NOT NULL DEFAULT 0,
+ evt_gen_precio     int DEFAULT 0,
+ evt_trib_precio    int DEFAULT 0,
+ evt_vip_precio     int DEFAULT 0,
+ evt_box_precio     int DEFAULT 0,
+ evt_usu_crea       varchar(7) NOT NULL,
+ evt_fec_crea       date NOT NULL,
+ evt_usu_modifica   varchar(7),
+ evt_fec_modifica   date,
+ evt_usu_elimina    varchar(7),
+ evt_fec_elimina    date,
+ evt_estado_elimina varchar(2) DEFAULT 'N',
+ evt_emp_id         int NOT NULL,
+ FOREIGN KEY (evt_emp_id) REFERENCES T_EMPRESAS(emp_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+```
+
