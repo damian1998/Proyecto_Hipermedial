@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles_registro.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="logo">Contact <span>Us</span></h1>
+        
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3>Contáctanos</h3>
+                <form action="controladores/crear_usuario.php" method="post">
+                    <p>
+                        <label for="nombres">Nombres</label>
+                        <input type="text" name="nombres" id="nombres" >
+                    </p>
+                    <p>
+                        <label for="correo">Correo</label>
+                        <input type="text" name="correo" id="correo">
+                    </p>
+                     <p>
+                        <label for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono">
+                    </p>
+                    <p>
+                        <label for="apellidos">Asunto</label>
+                        <input type="text" name="asunto" id="asunto">
+                    </p>
+                    <p class="block_contact">
+                        <label for="contrasena">Mensaje</label>
+                        <textarea name="mensaje" rows="3"></textarea>
+                    </p>
+                    <p class=" block block_contact">
+                        <input type="submit" value="Enviar" class="button" id="botonA">
+                        <input type="reset" value="Cancelar" class="button" id="botonB">
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4 class="logo"><i class="fas fa-ticket-alt" style="color: rgb(229,9,20,1)"></i>Ticket Home</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><p>Encuentranos en el Mall del Rio para que puedas saber más sobre los nuevos eventos y promociones actuales</p></li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7969.307395208255!2d-79.01019722589545!3d-2.915595226531123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x91cd18693b52dd21%3A0x8d549e0ebb08a9ce!2sCooperativa+de+ahorro+y+cr%C3%A9dito+CREA%2C+Cuenca+010107%2C+Ecuador!3m2!1d-2.9102856!2d-79.0013354!4m5!1s0x91cd187ebc0a1865%3A0x9611dcd2f11ecf12!2sMall+Del+R%C3%ADo%2C+Av.+Felipe+II+y+Circunvalaci%C3%B3n+Sur%2C+Ave+Circunvalaci%C3%B3n+Sur%2C+Cuenca!3m2!1d-2.9192698!2d-79.0148849!5e0!3m2!1ses!2sec!4v1558845903602!5m2!1ses!2sec" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+		<div class="footer-social-icons">
+			<ul>
+				<li><a href="" target="blank"><i class="fab fa-facebook-square"></i>
+				</a></li>
+				<li><a href="" target="blank"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="" target="blank"><i class="fab fa-github"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-menu-one">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">Quienes Somos</a></li>
+				<li><a href="">Categorias</a></li>
+				<li><a href="">Eventos</a></li>
+				<li><a href="contact.html">Contactos</a></li>
+			</ul>
+		</div>
+		<div class="footer-txt">
+			<p> &copy; Todos Los Derechos Reservados Universidad Politécnica Salesiana</p>
+			<p id="f-min">Cuenca-Ecuador</p>
+		</div>
+	</footer>
+</body>
+</html>
