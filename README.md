@@ -1,6 +1,8 @@
 # GESTION DE PEDIDOS PARA VENTA DE BOLETOS PARA ENTRETENIMIENTO
 
-Lo que se busca en este proyecto es crear unsistema que sirva para la venta de boletos de todo tipo de eventos, ya sea de entretenimiento, conciertos, teatro... etc. Este proyecto se realiza con el objetivo de mejorar los conocimientos sobre html, css, javascript, php. A continuación mostramos todo lo que se ha estado realizando para llevar a cabo con éxito este proyecto
+Lo que se busca en este proyecto es crear unsistema que sirva para la venta de boletos de todo tipo de eventos, ya sea de entretenimiento, conciertos, teatro... etc. Este proyecto se realiza con el objetivo de mejorar los conocimientos sobre html, css, javascript, php. A continuación mostramos todo lo que se ha estado realizando para llevar a cabo con éxito este proyecto.
+
+ ![1](images_readme/1.PNG)
 
 ## Tabla de contenido
 - [URL de Página Web](#URL-de-Página-Web).
