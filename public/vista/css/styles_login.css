@@ -39,15 +39,6 @@ body{
     padding: 1em;
 }
 
-.contact-wrapper p select{
-	width: 100%;
-    padding: 0.7em;
-    border: none;
-    background: none;
-    border-bottom: 1px solid rgb(229,9,20,1);
-    outline: 0;
-    color:rgb(229,9,20,1);
-}
 .contact-form{
     background: #222222;
 }
@@ -57,14 +48,22 @@ body{
     padding: 1em;
 }
 .contact-form form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+	display: block;
+}
+
+.contact-form form p label{
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.contact-form form p label i{
+	margin-right: 10px;
 }
 
 .contact-form .block{
-    display: grid;
-    grid-template-columns: 1fr 1fr;   
-    grid-column:1 / 3;
+    display: block;
+	text-align: center;
 }
 
 .contact-form form .block_contact{
@@ -80,8 +79,7 @@ body{
 }
 
 .contact-form form input, 
-.contac-form form .button,
-.contact-form form textarea{
+.contac-form form .button{
     width: 100%;
     padding: 0.7em;
     border: none;
@@ -111,6 +109,9 @@ body{
 
 .contact-info{
     background: black;
+	background-image: url(../../../images/banner.jpg);
+	background-size: 100vh 80vh;
+	background-attachment: fixed;
 }
 
 .contact-info h4, 

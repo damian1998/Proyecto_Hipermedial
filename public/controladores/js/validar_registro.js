@@ -154,7 +154,6 @@ function validarCorreo(){
 }
 
 
-
 function validarFecha(){
     var x = document.getElementById("fechaNacimiento").value
     var regEx = /^\d{2}[/]\d{2}[/]\d{4}$/;
@@ -197,4 +196,17 @@ function validarFecha(){
       }
   }
   
+}
+
+
+function rol(){
+	var e = document.getElementById("rol")
+	var strUser = e.options[e.selectedIndex].value
+	if(strUser == 2){
+		document.getElementById("user").style.display ="grid"
+		document.getElementById("enterprise").style.display ="none"
+	}else{
+		document.getElementById("user").style.display ="none"
+		document.getElementById("enterprise").style.display ="grid"
+	}
 }
