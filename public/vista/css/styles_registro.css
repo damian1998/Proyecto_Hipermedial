@@ -23,10 +23,6 @@ body{
     font-size: 3em;
 }
 
-#user, #enterprise{
-	display: none;
-}
-
 .logo span{
     color: rgb(229,9,20,1);
 }

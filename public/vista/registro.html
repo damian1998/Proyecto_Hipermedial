@@ -14,15 +14,9 @@
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Registrate</h3>
-                <p>
-                 <label for="select">Rol</label>
-                 <select name="rol" id="rol" onchange="rol()">
-                 	<option value="2">User</option>
-                 	<option value="3">Enterprise</option>
-                 </select>
-                </p>
-                <form action="controladores/crear_usuario.php" method="post" onsubmit="return validar()" id="user">
+                <form action="../controladores/php/registro.php" method="post" onsubmit="return validar()">
                     <p>
+                        <input type="text" name="roles" id="roles" value="2" hidden="hidden">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" id="nombres" onkeyup="validarLetras(this,'nombres')">
                     </p>
@@ -49,57 +43,6 @@
                     <p>
                         <label for="correo">Correo</label>
                         <input type="text" name="correo" id="correo" onkeyup="validarCorreo()">
-                    </p>
-                    <p>
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" name="contrasena" id="contrasena">
-                    </p>
-                    <p class="block">
-                        <input type="submit" value="Registrarse" class="button" id="botonA">
-                        <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
-                    </p>
-                </form>
-                <form action="controladores/crear_usuario.php" method="post" onsubmit="return validar()" id="enterprise">
-                    <p>
-                        <label for="nombres">Nombre de la Empresa</label>
-                        <input type="text" name="nombres" id="nombres" onkeyup="validarLetras(this,'nombres')">
-                    </p>
-                    <p>
-                        <label for="cedula">RUC</label>
-                        <input type="text" name="cedula" id="cedula" onkeyup="validarNumeros(this,'cedula')">
-                    </p>
-                    <p>
-                        <label for="telefono">Telefono</label>
-                        <input type="text" name="telefono" id="telefono" onkeyup="validarTelefono();validarNumeros(this,'telefono')">
-                    </p>
-                    <p>
-                        <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion" id="direccion" onkeyup="validarLetras(this,'direccion')">
-                    </p>
-                    <p>
-                        <label for="nombres">Nombres del Representante</label>
-                        <input type="text" name="nombres" id="nombres" onkeyup="validarLetras(this,'nombres')">
-                    </p>
-                    <p>
-                        <label for="apellidos">Apellidos del Representante</label>
-                        <input type="text" name="apellidos" id="apellidos" onkeyup="validarLetras(this,'apellidos')">
-                    </p>
-                    <p>
-                        <label for="cedula">Cedula del Representante</label>
-                        <input type="text" name="cedula" id="cedula" onkeyup="validarCedula();validarNumeros(this,'cedula')">
-                    </p>
-                    <p>
-                        <label for="correo">Correo</label>
-                        <input type="text" name="correo" id="correo" onkeyup="validarCorreo()">
-                    </p>
-                    <p>
-                    	<label for="cat">Categoria</label>
-                    	<select name="cat" id="cat">
-                    		<option value="1">Teatro</option>
-                    		<option value="2">Deporte</option>
-                    		<option value="3">Musica</option>
-                    		<option value="4">Congreso</option>
-                    	</select>
                     </p>
                     <p>
                         <label for="contrasena">Contraseña</label>
