@@ -25,16 +25,17 @@
 			  WHERE usu_id = $codigo";
 		
 		$result = $conn->query($sql);
-		$row = $result->fetch_assoc();	
+		$row = $result->fetch_assoc();
+
 	?>
     <div class="content">
         <h1 class="logo">Mi <span>Perfil</span></h1>
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Este es tu perfil</h3>
-                <form action="" method="post" onsubmit="return validar()">
+                <form action="../controladores/php/update_perfil.php" method="post" onsubmit="return validar()" enctype="multipart/form-data">
                     <p>
-                        <input type="text" name="roles" id="roles" value="2" hidden="hidden">
+                        <input type="text" name="id" id="id" value="<?php echo $codigo ?>" hidden="hidden">
                         <label for="nombres">Nombres</label>
                         <input type="text" name="nombres" id="nombres" value="<?php echo $row["usu_nombres"]?>" onkeyup="validarLetras(this,'nombres')">
                     </p>
@@ -62,6 +63,10 @@
                         <label for="correo">Correo</label>
                         <input type="text" name="correo" id="correo" value="<?php echo $row["usu_correo"]?>" onkeyup="validarCorreo()">
                     </p>
+                    <p>
+                    	<label for="imagenUpdate">Cambiar Imagen</label>
+                    	<input type='file' name='imagenUpdate' id='imagen' size='20'>
+                    </p>
                     <p class="block">
                         <input type="submit" value="Guardar Cambios" class="button" id="botonA">
                         <input type="reset" value="Cancelar" class="button" onclick="limpiar()" id="botonB">
@@ -72,9 +77,8 @@
                 <h4 class="logo"><i class="fas fa-ticket-alt" style="color: rgb(229,9,20,1)"></i><?php echo $row["usu_nombres"]; echo " ";echo $row["usu_apelidos"] ?></h4>
                 <ul>
                     <li><?php echo "<img class='img_perfil' src='data:".$row['usu_img_tipo']."; base64,".base64_encode($row['usu_img'])."'>";?></li>
-                    <li><p>Cambiar mi Foto de Perfil</p></li>
-                    <li><input type='file' name='imagenUpdate' id='imagen' size='20'></li>
                     <li><a href="about.html">Cambiar Contraseña</a></li>
+                    <li><p style="color:white; font-size:10px;">Este es tu perfil, en donde puedes ver todos los datos que has ingresado al momento de registrarte en nuestra página si deseas cambiar cualquier campo hazlo sin ningun problema</p></li>
                 </ul>
             </div>
         </div>
