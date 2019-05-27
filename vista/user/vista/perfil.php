@@ -12,7 +12,6 @@
     <title>Perfil</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_perfil.css">
-    <script type="text/javascript" src="../controladores/js/validar_registro.js"></script>
 </head>
 <body>
    
@@ -94,11 +93,11 @@
 		</div>
 		<div class="footer-menu-one">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">Quienes Somos</a></li>
-				<li><a href="category.php">Categorias</a></li>
-				<li><a href="eventos.php">Eventos</a></li>
-				<li><a href="contact.html">Contactos</a></li>
+				<li><a href="index.php?codigo=<?php echo $codigo?>">Home</a></li>
+				<li><a href="#">Mi Perfil</a></li>
+				<li><a href="">Comprar</a></li>
+				<li><a href="">Crear Eventos</a></li>
+				<li><a href="">Mis Compras</a></li>
 			</ul>
 		</div>
 		<div class="footer-txt">

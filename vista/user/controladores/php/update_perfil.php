@@ -17,14 +17,28 @@
         $tamano_archivo = $_FILES['imagenUpdate']['size'];
         
 		//IMAGEN
-		$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/proyecto/images';
-        move_uploaded_file($_FILES['imagenUpdate']['tmp_name'],$carpeta_destino."/".$nombre_archivo);
-        $archivo_objetivo = fopen($carpeta_destino."/". $nombre_archivo,'r');
-        $contenido=fread($archivo_objetivo,$tamano_archivo);
-        $contenido = addslashes($contenido);
-        fclose($archivo_objetivo);
-
-		$sql ="UPDATE T_USUARIOS 
+		
+		if($nombre_archivo == ''){
+			$sql ="UPDATE T_USUARIOS 
+			   SET usu_nombres = '$nombres',
+			   	   usu_apelidos = '$apellidos',
+				   usu_cedula = '$cedula',
+				   usu_direccion = '$direccion',
+				   usu_telefono = '$telefono',
+				   usu_correo = '$correo',
+				   usu_fec_nac = '$fecha',
+				   usu_modifica = 'admin',
+				   usu_fec_modifica = '$fechaC'
+				WHERE usu_id = $id";
+		}else{
+			$carpeta_destino = $_SERVER['DOCUMENT_ROOT'] .'/proyecto/images';
+        	move_uploaded_file($_FILES['imagenUpdate']['tmp_name'],$carpeta_destino."/".$nombre_archivo);
+        	$archivo_objetivo = fopen($carpeta_destino."/". $nombre_archivo,'r');
+        	$contenido=fread($archivo_objetivo,$tamano_archivo);
+        	$contenido = addslashes($contenido);
+        	fclose($archivo_objetivo);
+			
+			$sql ="UPDATE T_USUARIOS 
 			   SET usu_nombres = '$nombres',
 			   	   usu_apelidos = '$apellidos',
 				   usu_cedula = '$cedula',
@@ -37,7 +51,7 @@
 				   usu_modifica = 'admin',
 				   usu_fec_modifica = '$fechaC'
 				WHERE usu_id = $id";
-
+		}
 		if($conn->query($sql) === TRUE) {
              header("location: ../../vista/perfil.php?codigo=".$id);
         } else {
