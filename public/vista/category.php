@@ -23,8 +23,8 @@
 			<ul class="menu" id="menu">
 				<li class="menu__item"><a href="index.html" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
 				<li class="menu__item"><a href="about.html" class="menu__link"><i class="fas fa-book-open"><span>About</span></i></a></li>
-				<li class="menu__item"><a href="mision.html" class="menu__link"><i class="fab fa-buffer"><span>Category</span></i></a></li>
-				<li class="menu__item"><a href="vision.html" class="menu__link"><i class="far fa-calendar"><span>Events</span></i></a></li>
+				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fab fa-buffer"><span>Category</span></i></a></li>
+				<li class="menu__item"><a href="eventos.php" class="menu__link"><i class="far fa-calendar"><span>Events</span></i></a></li>
 				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-address-card"><span>Contact</span></i></a></li>
 			</ul>
 		</div>
@@ -98,6 +98,66 @@
 				?>	
 			</div>
 		</section>
+		<section class="grupo_eventos grupo_event_deporte">
+			<h3 class="titulo_event_php">CATEGORIA DEPORTE</h3>
+			<div class="eventos">
+				
+				<?php
+				 include '../../config/conexion.php';
+					
+				
+				 $sql = "SELECT *
+				 		 FROM T_EVENTOS,
+						 	  T_CATEGORIAS,
+							  T_EMPRESAS
+					 	 WHERE evt_emp_id = emp_id and
+						 	   emp_cat_id =cat_id and
+							   cat_id = 3";
+				
+				 $result = $conn->query($sql);
+				
+				 while($row = $result->fetch_assoc()){
+					echo "<div class='column_event'>";
+						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
+					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
+					 	echo "<p>".$row['evt_fec_evento']."</p>";
+					 	echo "<a href='' class='link_event'>Ir al Evento</a>";
+					echo "</div>";
+				 }
+				
+				?>	
+			</div>
+		</section>
+		<section class="grupo_eventos grupo_event_congreso">
+			<h3 class="titulo_event_php">CATEGORIA CONGRESO</h3>
+			<div class="eventos">
+				
+				<?php
+				 include '../../config/conexion.php';
+					
+				
+				 $sql = "SELECT *
+				 		 FROM T_EVENTOS,
+						 	  T_CATEGORIAS,
+							  T_EMPRESAS
+					 	 WHERE evt_emp_id = emp_id and
+						 	   emp_cat_id =cat_id and
+							   cat_id = 4";
+				
+				 $result = $conn->query($sql);
+				
+				 while($row = $result->fetch_assoc()){
+					echo "<div class='column_event'>";
+						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
+					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
+					 	echo "<p>".$row['evt_fec_evento']."</p>";
+					 	echo "<a href='' class='link_event'>Ir al Evento</a>";
+					echo "</div>";
+				 }
+				
+				?>	
+			</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="footer-social-icons">
@@ -110,10 +170,10 @@
 		</div>
 		<div class="footer-menu-one">
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">Quienes Somos</a></li>
-				<li><a href="">Categorias</a></li>
-				<li><a href="">Eventos</a></li>
+				<li><a href="category.php">Categorias</a></li>
+				<li><a href="eventos.php">Eventos</a></li>
 				<li><a href="contact.html">Contactos</a></li>
 			</ul>
 		</div>

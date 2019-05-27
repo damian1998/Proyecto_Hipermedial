@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>About</title>
-	<link rel="stylesheet" href="css/styles_about.css">
+	<title>Eventos</title>
+	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
@@ -22,7 +22,7 @@
 			<i class="fas fa-bars" id="btnmenu"></i>
 			<ul class="menu" id="menu">
 				<li class="menu__item"><a href="index.html" class="menu__link menu__link--select"><i class="fas fa-home"><span>Home</span></i></a></li>
-				<li class="menu__item"><a href="#" class="menu__link"><i class="fas fa-book-open"><span>About</span></i></a></li>
+				<li class="menu__item"><a href="about.html" class="menu__link"><i class="fas fa-book-open"><span>About</span></i></a></li>
 				<li class="menu__item"><a href="category.php" class="menu__link"><i class="fab fa-buffer"><span>Category</span></i></a></li>
 				<li class="menu__item"><a href="eventos.php" class="menu__link"><i class="far fa-calendar"><span>Events</span></i></a></li>
 				<li class="menu__item"><a href="contact.html" class="menu__link"><i class="fas fa-address-card"><span>Contact</span></i></a></li>
@@ -33,24 +33,38 @@
 			<a href="registro.html" class="sesion"><i class="fas fa-user-plus" id="registro"><span>Registrate</span></i></a>
 		</div>
 	</nav>
+	<section class="banner_category">
+		<div class="opacidad"></div>
+		<div class="banner__content">TE MOSTRAMOS NUESTRA GRAN VARIEDAD DE EVENTOS</div>
+	</section>
 	<main class="main">
-		<section class="mision">
-			<div class="txt_mision">
-				<h2 class="titulo_about">MISION</h2>
-				<p class="txt_about">Nuestra misión brindar servicio de impresión de tickets, venta y control de
-					acceso para eventos a nivel nacional de una manera ágil y transparente. Contamos con el servicio de venta en línea que permite a nuestros clientes adquirir sus tickets a través de nuestro sitio web con envio a domicilio dentro del país.</p>
-			</div>
-		</section>
-		<section class="mision">
-			<div class="txt_vision">
-				<h2 class="titulo_about">VISION</h2>
-				<p class="txt_about">Brindamos nuestro servicio a los empresarios que realicen todos tipo de eventos públicos o privados; entre ellos: conciertos, monólogos, obras de teatro, partidos de fútbol, eventos corporativos, eventos culturales y sociales.</p>
-			</div>
-		</section>
-		<section class="somos">
-			<div class="txt_somos">
-				<h2 class="titulo_about">QUIENES SOMOS</h2>
-				<p class="txt_about">Ticket Home es la plataforma de compra y venta de entradas más grande del mundo, con entradas disponibles para más de 10 millones de eventos deportivos, musicales y de teatro en la ciudad de Cuenca. Permitimos a los fans comprar y vender entradas en cualquier momento y en cualquier lugar a través de nuestras plataformas de escritorio y aplicación móvil.</p>
+	
+		<section class="grupo_eventos grupo_event_musica">
+			<h3 class="titulo_event_php">ESCOJE UNO</h3>
+			<div class="eventos">
+				
+				<?php
+				 include '../../config/conexion.php';
+					
+				 $sql = "SELECT *
+				 		 FROM T_EVENTOS,
+						 	  T_CATEGORIAS,
+							  T_EMPRESAS
+					 	 WHERE evt_emp_id = emp_id and
+						 	   emp_cat_id =cat_id";
+				
+				 $result = $conn->query($sql);
+				
+				 while($row = $result->fetch_assoc()){
+					echo "<div class='column_event'>";
+						echo "<img class='img_event' src='data:".$row['evt_img_tipo']."; base64,".base64_encode($row['evt_img'])."'>";
+					 	echo "<h4 class='title_event'>".$row["evt_desc"]."</h4>";
+					 	echo "<p>".$row['evt_fec_evento']."</p>";
+					 	echo "<a href='' class='link_event'>Ir al Evento</a>";
+					echo "</div>";
+				 }
+				
+				?>	
 			</div>
 		</section>
 	</main>
